@@ -14,10 +14,10 @@ class GameGenresPage extends React.Component {
   }
 
   componentDidMount() {
+    console.log("ganres loaded");
     setTimeout(() => {
       this.setTimePassed();
     }, 150);
-    this._checkIsRegisteredAsDealer();
   }
 
   setTimePassed() {
@@ -26,20 +26,28 @@ class GameGenresPage extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        {!this.initialized ? (
-          <ActivityIndicator size="large" color="white" />
-        ) : (
-          <View>
-            <Text>GameGenresPage</Text>
-            <Text>GameGenresPage</Text>
-            <Text>GameGenresPage</Text>
-            <Text>GameGenresPage</Text>
-            <Text>GameGenresPage</Text>
-            <Text>GameGenresPage</Text>
-            <Text>GameGenresPage</Text>
-          </View>
-        )}
+      <View style={{}}>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
+        <Text>GameGenresPage</Text>
       </View>
     );
   }
