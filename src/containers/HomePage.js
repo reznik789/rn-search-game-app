@@ -6,12 +6,16 @@ import {
   ActivityIndicator,
   Platform
 } from "react-native";
-import {Link} from "react-router-native";
 
 
 class HomePage extends Component {
   get initialized() {
     return this.state.timePassed;
+  }
+
+  static navigationOptions = {
+    drawerLabel: 'Home',
+    title: "Home"
   }
 
   title = "Home Page";
@@ -36,51 +40,19 @@ class HomePage extends Component {
 
   render = () => (
     <View style={styles.container} >
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
-      <Link to="/menu" >
-        <Text>HomePage</Text>
-      </Link>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
+     <Text>Home Page</Text>
     </View>
   ); 
 }

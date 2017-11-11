@@ -26,7 +26,7 @@ class GameGenresPage extends React.Component {
 
   render() {
     return (
-      <View style={{}}>
+      <View style={styles.container}>
         <Text>GameGenresPage</Text>
         <Text>GameGenresPage</Text>
         <Text>GameGenresPage</Text>

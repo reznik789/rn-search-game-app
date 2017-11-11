@@ -6,7 +6,6 @@ import {
   ActivityIndicator,
   Platform
 } from "react-native";
-import { Link } from "react-router-native";
 
 class GenreSinglePage extends Component {
   get initialized() {
@@ -34,52 +33,20 @@ class GenreSinglePage extends Component {
   }
 
   render = () => (
-    <View style={styles.container}>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
-      <Link to="/">
-        <Text>GenreSinglePage</Text>
-      </Link>
+    <View style={styles.container} >
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
+     <Text>Genre Single</Text>
     </View>
   );
 }
