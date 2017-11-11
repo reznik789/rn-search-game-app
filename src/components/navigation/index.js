@@ -1,8 +1,9 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 import { HomePage, GameGenresPage, GenreSinglePage } from "../../containers";
 import styles from "./styles";
+import Icon from "react-native-vector-icons/Ionicons";
 
 // drawer stack
 const DrawerStack = DrawerNavigator({
@@ -24,7 +25,7 @@ const DrawerNavigation = StackNavigator(
         headerTitleStyle: styles.headerTitle,
         initialRouteName: "home",
         headerLeft: (
-          <Text onPress={() => navigation.navigate("DrawerOpen")}>Menu</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("DrawerToggle")} ><Icon name='md-menu' color="white" size={25}/></TouchableOpacity>
         )
       };
     }
