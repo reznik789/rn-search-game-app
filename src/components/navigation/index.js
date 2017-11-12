@@ -5,11 +5,20 @@ import { HomePage, GameGenresPage, GenreSinglePage } from "../../containers";
 import styles from "./styles";
 import Icon from "react-native-vector-icons/Ionicons";
 
+const GenresStack = StackNavigator(
+  {
+    genres: { screen: GameGenresPage },
+    singleGenre: { screen: GenreSinglePage }
+  },
+  {
+    initialRouteName: "genres",
+    headerMode: "none"
+  }
+);
 // drawer stack
 const DrawerStack = DrawerNavigator({
   home: { screen: HomePage },
-  genres: { screen: GameGenresPage },
-  singleGenre: { screen: GenreSinglePage }
+  GenresStack: { screen: GenresStack }
 });
 
 const DrawerNavigation = StackNavigator(

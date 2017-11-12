@@ -1,63 +1,31 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import GameGenres from "../components/genres";
+import { connect } from "react-redux";
 
 class GameGenresPage extends React.Component {
-  get initialized() {
-    return this.state.timePassed;
+
+  static navigationOptions = {
+    drawLabel: "Genres",
+    title: "Genres"
   }
 
   constructor(props) {
     super(props);
-    this.state = {
-      timePassed: false
-    };
-  }
-
-  componentDidMount() {
-    console.log("ganres loaded");
-    setTimeout(() => {
-      this.setTimePassed();
-    }, 150);
-  }
-
-  setTimePassed() {
-    this.setState({ timePassed: true });
   }
 
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-        <Text>GameGenresPage</Text>
-      </View>
-    );
+    console.log(this.props);
+    return <GameGenres />;
   }
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  }
+
+const mapStateToProps = (state, ownProps) => ({
+  genres: state.genres.genres,
+  fetching: state.genres.fetching,
+  error: state.genres.error
 });
 
-export default GameGenresPage;
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps, mapDispatchToProps)(GameGenresPage);
