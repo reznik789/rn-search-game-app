@@ -16,13 +16,14 @@ class GameGenresPage extends React.Component {
   }
 
   render() {
-    const { genres, fetching, error, actions } = this.props;
+    const { genres, fetching, error, actions, navigation } = this.props;
     return (
       <GameGenres
         genres={genres}
         fetching={fetching}
         error={error}
         actions={actions}
+        navigation={navigation}
       />
     );
   }

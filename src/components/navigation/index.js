@@ -1,29 +1,30 @@
 import React from "react";
 import { Text, TouchableOpacity } from "react-native";
-import { StackNavigator, DrawerNavigator } from "react-navigation";
+import {
+  StackNavigator,
+  DrawerNavigator,
+  HeaderBackButton
+} from "react-navigation";
 import { HomePage, GameGenresPage, GenreSinglePage } from "../../containers";
 import styles from "./styles";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const GenresStack = StackNavigator(
-  {
-    genres: { screen: GameGenresPage },
-    singleGenre: { screen: GenreSinglePage }
-  },
-  {
-    initialRouteName: "genres",
-    headerMode: "none"
-  }
-);
 // drawer stack
 const DrawerStack = DrawerNavigator({
   home: { screen: HomePage },
-  GenresStack: { screen: GenresStack }
+  genres: { screen: GameGenresPage }
 });
 
 const DrawerNavigation = StackNavigator(
   {
-    DrawerStack: { screen: DrawerStack }
+    DrawerStack: { screen: DrawerStack },
+    singleGenre: {
+      screen: GenreSinglePage,
+      navigationOptions: ({ navigation }) => ({
+        title: `${navigation.state.params.genreName}`,
+        headerLeft: <HeaderBackButton tintColor='white' onPress={() => navigation.goBack(null)} />
+      })
+    }
   },
   {
     headerMode: "float",

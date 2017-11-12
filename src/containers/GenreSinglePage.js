@@ -8,6 +8,10 @@ import {
 } from "react-native";
 
 class GenreSinglePage extends Component {
+  // static navigationOptions = ({ navigation }) => ({
+  //   title: `${navigation.state.params.genreName}`
+  // });
+
   get initialized() {
     return this.state.timePassed;
   }
@@ -32,20 +36,20 @@ class GenreSinglePage extends Component {
   }
 
   render = () => (
-    <View style={styles.container} >
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
-     <Text>Genre Single</Text>
+    <View style={styles.container}>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
+      <Text>Genre Single</Text>
     </View>
   );
 }

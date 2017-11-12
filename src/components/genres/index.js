@@ -37,7 +37,19 @@ class GameGenres extends React.Component {
     this.setState({ timePassed: true });
   }
 
-  _renderItem = ({ item }) => <ListItem title={`${item.name}`} />;
+  _goToSingleGenre = genre => {
+    this.props.navigation.navigate("singleGenre", {
+      genreId: genre.id,
+      genreName: genre.name
+    });
+  };
+
+  _renderItem = ({ item }) => (
+    <ListItem
+      onPress={() => this._goToSingleGenre(item)}
+      title={`${item.name}`}
+    />
+  );
 
   render() {
     const { genres, fetching, error } = this.props;
@@ -46,7 +58,7 @@ class GameGenres extends React.Component {
         <ActivityIndicator size="large" color="blue" />
       </View>
     ) : (
-      <List containerStyle={{marginTop:0}} >
+      <List containerStyle={{ marginTop: 0 }}>
         <FlatList
           data={genres}
           renderItem={this._renderItem}
