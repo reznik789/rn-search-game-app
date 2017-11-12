@@ -25,7 +25,16 @@ const DrawerNavigation = StackNavigator(
         headerTitleStyle: styles.headerTitle,
         initialRouteName: "home",
         headerLeft: (
-          <TouchableOpacity onPress={() => navigation.navigate("DrawerToggle")}>
+          <TouchableOpacity
+            style={styles.headerButton}
+            onPress={() => {
+              if (navigation.state.index === 0) {
+                navigation.navigate("DrawerOpen");
+              } else {
+                navigation.navigate("DrawerClose");
+              }
+            }}
+          >
             <Icon name="md-menu" color="white" size={25} />
           </TouchableOpacity>
         )

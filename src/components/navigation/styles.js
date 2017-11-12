@@ -7,5 +7,8 @@ export default StyleSheet.create({
   headerTitle: {
       color:"white",
       textAlign: "center"
+  },
+  headerButton:{
+    marginLeft:10
   }
 });
