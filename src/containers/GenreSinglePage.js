@@ -22,7 +22,6 @@ class GenreSinglePage extends Component {
   }
 
   componentDidMount() {
-    console.log("Genres Page loaded");
     setTimeout(() => {
       this.setTimePassed();
     }, 150);

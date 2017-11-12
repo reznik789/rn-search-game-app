@@ -27,7 +27,6 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    console.log("Home Page loaded");
     setTimeout(() => {
       this.setTimePassed();
     }, 350);

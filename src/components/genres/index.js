@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ActivityIndicator,
+  FlatList
+} from "react-native";
+import { List, ListItem } from "react-native-elements";
 
 class GameGenres extends React.Component {
   get initialized() {
@@ -13,8 +20,14 @@ class GameGenres extends React.Component {
     };
   }
 
+  _getGenres = () => {
+    this.props.actions.getGenres();
+  };
+
   componentDidMount() {
-    console.log("ganres loaded");
+    if (this.props.genres.length === 0) {
+      this._getGenres();
+    }
     setTimeout(() => {
       this.setTimePassed();
     }, 150);
@@ -24,31 +37,22 @@ class GameGenres extends React.Component {
     this.setState({ timePassed: true });
   }
 
+  _renderItem = ({ item }) => <ListItem title={`${item.name}`} />;
+
   render() {
-    return (
+    const { genres, fetching, error } = this.props;
+    return !this.initialized || fetching ? (
       <View style={styles.container}>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
-        <Text>GameGenres</Text>
+        <ActivityIndicator size="large" color="blue" />
       </View>
+    ) : (
+      <List containerStyle={{marginTop:0}} >
+        <FlatList
+          data={genres}
+          renderItem={this._renderItem}
+          keyExtractor={(item, index) => item.id}
+        />
+      </List>
     );
   }
 }

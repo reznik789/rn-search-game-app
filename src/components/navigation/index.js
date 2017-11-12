@@ -28,7 +28,6 @@ const DrawerNavigation = StackNavigator(
   {
     headerMode: "float",
     navigationOptions: ({ navigation }) => {
-      console.log(navigation);
       return {
         headerStyle: styles.header,
         headerTitleStyle: styles.headerTitle,

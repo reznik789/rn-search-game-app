@@ -52,7 +52,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 /draft/
-/src/config/
+/src/config/config.js
 /jsconfig.json
 .vscode
 swagger.yaml
