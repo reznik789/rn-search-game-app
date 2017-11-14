@@ -25,6 +25,19 @@ class GenreSinglePage extends Component {
     };
   }
 
+  _getGames = ( genreId ) => {
+    
+  }
+
+  componentWillMount() {
+    const {genre} = this.props.navigation.state;
+    if ( !!genre && !!genre.id ) {
+      this._getGames(genre.id);
+    } else {
+      this.props.navigation.goBack();
+    }
+  }
+
   componentDidMount() {
     setTimeout(() => {
       this.setTimePassed();

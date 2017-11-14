@@ -21,7 +21,7 @@ const DrawerNavigation = StackNavigator(
     singleGenre: {
       screen: GenreSinglePage,
       navigationOptions: ({ navigation }) => ({
-        title: `${navigation.state.params.genreName}`,
+        title: `${navigation.state.params.genre.name}`,
         headerLeft: <HeaderBackButton tintColor='white' onPress={() => navigation.goBack(null)} />
       })
     }

@@ -39,8 +39,7 @@ class GameGenres extends React.Component {
 
   _goToSingleGenre = genre => {
     this.props.navigation.navigate("singleGenre", {
-      genreId: genre.id,
-      genreName: genre.name
+      genre
     });
   };
 
