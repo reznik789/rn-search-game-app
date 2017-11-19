@@ -7,6 +7,7 @@ import {
   FlatList
 } from "react-native";
 import { List, ListItem } from "react-native-elements";
+import PropTypes from "prop-types";
 
 class GameGenres extends React.Component {
   get initialized() {
@@ -74,5 +75,12 @@ const styles = StyleSheet.create({
     alignItems: "center"
   }
 });
+
+GameGenres.propTypes = {
+  genres: PropTypes.array.isRequired,
+  fetching: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
+  actions: PropTypes.object.isRequired
+};
 
 export default GameGenres;
