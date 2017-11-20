@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, ActivityIndicator, FlatList } from "react-native";
-import { List, ListItem } from "react-native-elements";
+import { List, ListItem, Tile } from "react-native-elements";
 import PropTypes from "prop-types";
 import styles from "./styles";
 
@@ -41,7 +41,13 @@ export default class GenreSingle extends Component {
     this.setState({ timePassed: true });
   }
 
-  _renderItem = ({ item }) => <ListItem title={`${item.name}`} />;
+  _renderItem = ({ item }) => {
+    const imgUrl =
+      "https://images.igdb.com/igdb/image/upload/t_screenshot_med_2x/" +
+      item.screenshots[0].cloudinary_id +
+      ".jpg";
+    return <Tile imageSrc={{ uri: imgUrl }} title={item.name}/>;
+  };
 
   render = () => {
     const { games, fetching, error } = this.props;
