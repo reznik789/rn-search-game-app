@@ -3424,14 +3424,20 @@ react-native-drawer-layout@1.3.2:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
-react-native-elements@^0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.18.2.tgz#f3e814db3983d3c52c31a40293220439745e5ab4"
+react-native-elements@^0.18.4:
+  version "0.18.4"
+  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.18.4.tgz#f940ec226437af96db79c9e6087e1df9c50184f9"
   dependencies:
     lodash.isempty "^4.4.0"
     lodash.times "^4.3.2"
     opencollective "^1.0.3"
     prop-types "^15.5.8"
+
+react-native-linear-gradient@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.3.0.tgz#757997197e35edf52e290891a11566e462845da1"
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native-tab-view@^0.0.70:
   version "0.0.70"

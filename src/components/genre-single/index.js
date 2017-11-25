@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, ActivityIndicator, FlatList } from "react-native";
 import { List, ListItem, Tile } from "react-native-elements";
+import LinearGradient from "react-native-linear-gradient";
 import PropTypes from "prop-types";
 import styles from "./styles";
 
@@ -42,11 +43,26 @@ export default class GenreSingle extends Component {
   }
 
   _renderItem = ({ item }) => {
-    const imgUrl =
-      "https://images.igdb.com/igdb/image/upload/t_screenshot_med_2x/" +
-      item.screenshots[0].cloudinary_id +
-      ".jpg";
-    return <Tile imageSrc={{ uri: imgUrl }} title={item.name}/>;
+    let screenshot = null;
+    if (!!item.screenshots && item.screenshots.length > 0) {
+      const imgUrl =
+        "https://images.igdb.com/igdb/image/upload/t_screenshot_med_2x/" +
+        item.screenshots[0].cloudinary_id +
+        ".jpg";
+      screenshot = { uri: imgUrl };
+    } else {
+      screenshot = require("../../assets/blank.png");
+    }
+    return (
+      <LinearGradient
+        start={{ x: 0.0, y: 0.25 }}
+        end={{ x: 0.5, y: 1.0 }}
+        colors={["#4c669f", "#3b5998"]}
+        style={styles.linearGradient}
+      >
+        <Tile imageSrc={screenshot} title={item.name} featured />
+      </LinearGradient>
+    );
   };
 
   render = () => {

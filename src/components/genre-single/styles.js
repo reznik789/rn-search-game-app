@@ -15,7 +15,11 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "#333333",
         marginBottom: 5
-      }
+      },
+      linearGradient: {
+        flex: 1,
+        borderRadius: 5
+      },
 });
 
 export default styles;
