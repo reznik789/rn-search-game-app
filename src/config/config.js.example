@@ -1,0 +1,4 @@
+export default {
+  API_URL: "Api Url Here",
+  USER_KEY: "Api Key Here"
+};
