@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "314584774971",
+    "firebase_url": "https://gamernapp.firebaseio.com",
+    "project_id": "gamernapp",
+    "storage_bucket": "gamernapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314584774971:android:70be5d026eb997ab",
+        "android_client_info": {
+          "package_name": "com.gamernapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314584774971-jhpogtqffjo4mf5gl1ka416ht8l35j4q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gamernapp",
+            "certificate_hash": "01b85da1cdc0e8674f64cd457513e604babf9619"
+          }
+        },
+        {
+          "client_id": "314584774971-ot0213gu2u9834ejq90vmgseu7tciukj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF8KbJ0PyN8EyS9xkylGTERb0doKb2XFQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314584774971-ot0213gu2u9834ejq90vmgseu7tciukj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
