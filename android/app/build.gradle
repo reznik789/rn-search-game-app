@@ -120,8 +120,19 @@ android {
             include "armeabi-v7a", "x86"
         }
     }
+    signingConfigs {
+            release {
+                if (project.hasProperty('RN_GAME_SEARCH_RELEASE_STORE_FILE')) {
+                    storeFile file(RN_GAME_SEARCH_RELEASE_STORE_FILE)
+                    storePassword RN_GAME_SEARCH_RELEASE_STORE_PASSWORD
+                    keyAlias RN_GAME_SEARCH_RELEASE_KEY_ALIAS
+                    keyPassword RN_GAME_SEARCH_RELEASE_KEY_PASSWORD
+                }
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
